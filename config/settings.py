@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'mailing',
     'recipient',
     'django_apscheduler',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -149,3 +150,5 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
+# users settings
+AUTH_USER_MODEL = 'users.User'
