@@ -1,13 +1,14 @@
 import string
 import random
 
+from django.contrib.auth.views import LoginView
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView
 
 from config.settings import EMAIL_HOST_USER
-from users.forms import UserRegisterForm, ProfileForm
+from users.forms import UserRegisterForm, ProfileForm, UserLoginForm
 from users.models import User
 import secrets
 
@@ -24,10 +25,10 @@ class UserCreateView(CreateView):
         user.token = token
         user.save()
         host = self.request.get_host()
-        url = f"http://{host}/users/email-confirm/{token}"
+        url = f"http://{host}/users/email-confirm/{token}/"
         send_mail(
             subject="Подтверждение почты",
-            message=f"Перейдите по ссылке для подтверждения почты{url}",
+            message=f"Перейдите по ссылке для подтверждения почты {url}",
             from_email=EMAIL_HOST_USER,
             recipient_list=[user.email],
         )
@@ -72,3 +73,8 @@ class ProfileView(UpdateView):
 
     def get_object(self, queryset=None):
         return self.request.user
+
+
+class UserLoginView(LoginView):
+    template_name = "users/login.html"
+    form_class = UserLoginForm

@@ -1,0 +1,53 @@
+{% extends 'recipient/base.html' %}
+{% block content %}
+{% load my_tags %}
+<div class="row mb-5">
+<div class="col-md-4">
+    <div class="p-5 border">
+        <h1>
+            <strong>{{ mailing_settings }}</strong>
+        </h1>
+        <h1>
+            Количество рассылок всего
+        </h1>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="p-5 border">
+        <h1>
+            <strong>{{ active_mailings }}</strong>
+        </h1>
+        <h1>
+            Количество активных рассылок
+        </h1>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="p-5 border">
+        <h1>
+            <strong>{{ recipient }}</strong>
+        </h1>
+        <h1>
+            Количество уникальных клиентов
+        </h1>
+    </div>
+</div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 text-center">
+    {% for object in blogs %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{ object.title }}</h4>
+            </div>
+            <img class="card-img-top mb-3 p-2" src="{{ object.image | media_filter }}" alt="">
+            <div class="card-body">
+                <p class="card-title pricing-card-title">{{ object.body|truncatechars:50 }}</p>
+                <a class="btn btn-primary" href="{% url 'blog:detail' object.pk %}"
+                   role="button">Просмотреть</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

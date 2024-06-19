@@ -1,6 +1,7 @@
 from django.db import models
 
 from recipient.models import Recipient
+from users.models import User
 
 NULLABLE = {'null': True, 'blank': True}
 FREQUENCY_CHOICES = [('daily', 'раз в день'), ('weekly', 'раз в неделю'), ('monthly', 'раз в месяц'), ]
@@ -11,6 +12,7 @@ LOGS_STATUS_CHOICES = [('success', 'успешно'), ('fail', 'неуспешн
 class MailingMessage(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
     content = models.TextField(verbose_name='Контент')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE, verbose_name='Владелец')
 
     class Meta:
         verbose_name = 'Сообщение'
@@ -28,10 +30,14 @@ class MailingSettings(models.Model):
     setting_status = models.CharField(max_length=50, choices=STATUS_OF_NEWSLETTER, verbose_name='Статус рассылки',
                                       default='Create')
     recipients = models.ManyToManyField(Recipient, verbose_name='Получатели')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE, verbose_name='Владелец')
 
     class Meta:
         verbose_name = 'Настройка рассылки'
         verbose_name_plural = 'Настройки рассылки'
+        permissions = [
+            ('change_mailingsettings_setting_status', 'Can change mailingsettings setting_status')
+        ]
 
     def __str__(self):
         return f'{self.message} отправляется каждый {self.sending} с {self.first_datetime}'
