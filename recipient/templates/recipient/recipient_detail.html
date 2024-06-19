@@ -11,7 +11,10 @@
                         Комментарии: {{ object.description }}
                     </div>
                 </div>
-                <a href="{% url 'recipient:delete' object.pk %}" class="btn btn-warning">Удалить</a>
+                {% if user == object.owner or user.is_superuser %}
+                <a href="{% url 'recipient:edit' object.pk %}" class="btn btn-warning">Изменить</a>
+                <a href="{% url 'recipient:delete' object.pk %}" class="btn btn-danger">Удалить</a>
+                {% endif %}
             </div>
         </div>
     </div>
