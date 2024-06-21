@@ -7,7 +7,7 @@
         {% if perms.blog.add_blog %}
          <a class="nav-item nav-link link-body-emphasis" href="{% url 'blog:create' %}">Добавить блог</a>
         {% endif %}
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:list' %}">Все рассылки</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:list' %}">Все сообщения</a>
         <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:settings_list' %}">Планирование
             рассылок</a>
         <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:create' %}">Создание сообщения</a>
