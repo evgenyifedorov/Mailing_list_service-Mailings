@@ -14,7 +14,7 @@ class MailingMessageTemplateView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['blog'] = get_blog_from_cache()
+        context_data['blogs'] = get_blog_from_cache()
         mailing_settings = MailingSettings.objects.all()
         context_data['mailing_settings'] = len(mailing_settings)
         active_mailings = MailingSettings.objects.filter(setting_status='Started')
@@ -47,11 +47,11 @@ class MailingMessageDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('mailing:list')
 
 
-class MailingMessageListView(ListView):
+class MailingMessageListView(LoginRequiredMixin, ListView):
     model = MailingMessage
 
 
-class MailingMessageDetailView(DetailView):
+class MailingMessageDetailView(LoginRequiredMixin, DetailView):
     model = MailingMessage
 
 
