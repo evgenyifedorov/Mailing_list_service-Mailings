@@ -112,7 +112,7 @@
     "pk": 13,
     "fields": {
         "name": "Can add content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "add_contenttype"
     }
 },
@@ -121,7 +121,7 @@
     "pk": 14,
     "fields": {
         "name": "Can change content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "change_contenttype"
     }
 },
@@ -130,7 +130,7 @@
     "pk": 15,
     "fields": {
         "name": "Can delete content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "delete_contenttype"
     }
 },
@@ -139,7 +139,7 @@
     "pk": 16,
     "fields": {
         "name": "Can view content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "view_contenttype"
     }
 },
@@ -148,7 +148,7 @@
     "pk": 17,
     "fields": {
         "name": "Can add session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "add_session"
     }
 },
@@ -157,7 +157,7 @@
     "pk": 18,
     "fields": {
         "name": "Can change session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "change_session"
     }
 },
@@ -166,7 +166,7 @@
     "pk": 19,
     "fields": {
         "name": "Can delete session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "delete_session"
     }
 },
@@ -175,7 +175,7 @@
     "pk": 20,
     "fields": {
         "name": "Can view session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "view_session"
     }
 },
@@ -184,7 +184,7 @@
     "pk": 21,
     "fields": {
         "name": "Can add Сообщение",
-        "content_type": 13,
+        "content_type": 6,
         "codename": "add_mailingmessage"
     }
 },
@@ -193,7 +193,7 @@
     "pk": 22,
     "fields": {
         "name": "Can change Сообщение",
-        "content_type": 13,
+        "content_type": 6,
         "codename": "change_mailingmessage"
     }
 },
@@ -202,7 +202,7 @@
     "pk": 23,
     "fields": {
         "name": "Can delete Сообщение",
-        "content_type": 13,
+        "content_type": 6,
         "codename": "delete_mailingmessage"
     }
 },
@@ -211,7 +211,7 @@
     "pk": 24,
     "fields": {
         "name": "Can view Сообщение",
-        "content_type": 13,
+        "content_type": 6,
         "codename": "view_mailingmessage"
     }
 },
@@ -220,7 +220,7 @@
     "pk": 25,
     "fields": {
         "name": "Can add Настройка рассылки",
-        "content_type": 11,
+        "content_type": 7,
         "codename": "add_mailingsettings"
     }
 },
@@ -229,7 +229,7 @@
     "pk": 26,
     "fields": {
         "name": "Can change Настройка рассылки",
-        "content_type": 11,
+        "content_type": 7,
         "codename": "change_mailingsettings"
     }
 },
@@ -238,7 +238,7 @@
     "pk": 27,
     "fields": {
         "name": "Can delete Настройка рассылки",
-        "content_type": 11,
+        "content_type": 7,
         "codename": "delete_mailingsettings"
     }
 },
@@ -247,7 +247,7 @@
     "pk": 28,
     "fields": {
         "name": "Can view Настройка рассылки",
-        "content_type": 11,
+        "content_type": 7,
         "codename": "view_mailingsettings"
     }
 },
@@ -255,189 +255,189 @@
     "model": "auth.permission",
     "pk": 29,
     "fields": {
-        "name": "Can add Статус отправки",
-        "content_type": 12,
-        "codename": "add_mailingstatus"
+        "name": "Can change mailingsettings setting_status",
+        "content_type": 7,
+        "codename": "change_mailingsettings_setting_status"
     }
 },
 {
     "model": "auth.permission",
     "pk": 30,
     "fields": {
-        "name": "Can change Статус отправки",
-        "content_type": 12,
-        "codename": "change_mailingstatus"
+        "name": "Can add Статус отправки",
+        "content_type": 8,
+        "codename": "add_mailingstatus"
     }
 },
 {
     "model": "auth.permission",
     "pk": 31,
     "fields": {
-        "name": "Can delete Статус отправки",
-        "content_type": 12,
-        "codename": "delete_mailingstatus"
+        "name": "Can change Статус отправки",
+        "content_type": 8,
+        "codename": "change_mailingstatus"
     }
 },
 {
     "model": "auth.permission",
     "pk": 32,
     "fields": {
-        "name": "Can view Статус отправки",
-        "content_type": 12,
-        "codename": "view_mailingstatus"
+        "name": "Can delete Статус отправки",
+        "content_type": 8,
+        "codename": "delete_mailingstatus"
     }
 },
 {
     "model": "auth.permission",
     "pk": 33,
     "fields": {
-        "name": "Can add Получатель",
-        "content_type": 7,
-        "codename": "add_recipient"
+        "name": "Can view Статус отправки",
+        "content_type": 8,
+        "codename": "view_mailingstatus"
     }
 },
 {
     "model": "auth.permission",
     "pk": 34,
     "fields": {
-        "name": "Can change Получатель",
-        "content_type": 7,
-        "codename": "change_recipient"
+        "name": "Can add Получатель",
+        "content_type": 9,
+        "codename": "add_recipient"
     }
 },
 {
     "model": "auth.permission",
     "pk": 35,
     "fields": {
-        "name": "Can delete Получатель",
-        "content_type": 7,
-        "codename": "delete_recipient"
+        "name": "Can change Получатель",
+        "content_type": 9,
+        "codename": "change_recipient"
     }
 },
 {
     "model": "auth.permission",
     "pk": 36,
     "fields": {
-        "name": "Can view Получатель",
-        "content_type": 7,
-        "codename": "view_recipient"
+        "name": "Can delete Получатель",
+        "content_type": 9,
+        "codename": "delete_recipient"
     }
 },
 {
     "model": "auth.permission",
     "pk": 37,
     "fields": {
-        "name": "Can add django job",
-        "content_type": 14,
-        "codename": "add_djangojob"
+        "name": "Can view Получатель",
+        "content_type": 9,
+        "codename": "view_recipient"
     }
 },
 {
     "model": "auth.permission",
     "pk": 38,
     "fields": {
-        "name": "Can change django job",
-        "content_type": 14,
-        "codename": "change_djangojob"
+        "name": "Can add django job",
+        "content_type": 10,
+        "codename": "add_djangojob"
     }
 },
 {
     "model": "auth.permission",
     "pk": 39,
     "fields": {
-        "name": "Can delete django job",
-        "content_type": 14,
-        "codename": "delete_djangojob"
+        "name": "Can change django job",
+        "content_type": 10,
+        "codename": "change_djangojob"
     }
 },
 {
     "model": "auth.permission",
     "pk": 40,
     "fields": {
-        "name": "Can view django job",
-        "content_type": 14,
-        "codename": "view_djangojob"
+        "name": "Can delete django job",
+        "content_type": 10,
+        "codename": "delete_djangojob"
     }
 },
 {
     "model": "auth.permission",
     "pk": 41,
     "fields": {
-        "name": "Can add django job execution",
-        "content_type": 15,
-        "codename": "add_djangojobexecution"
+        "name": "Can view django job",
+        "content_type": 10,
+        "codename": "view_djangojob"
     }
 },
 {
     "model": "auth.permission",
     "pk": 42,
     "fields": {
-        "name": "Can change django job execution",
-        "content_type": 15,
-        "codename": "change_djangojobexecution"
+        "name": "Can add django job execution",
+        "content_type": 11,
+        "codename": "add_djangojobexecution"
     }
 },
 {
     "model": "auth.permission",
     "pk": 43,
     "fields": {
-        "name": "Can delete django job execution",
-        "content_type": 15,
-        "codename": "delete_djangojobexecution"
+        "name": "Can change django job execution",
+        "content_type": 11,
+        "codename": "change_djangojobexecution"
     }
 },
 {
     "model": "auth.permission",
     "pk": 44,
     "fields": {
-        "name": "Can view django job execution",
-        "content_type": 15,
-        "codename": "view_djangojobexecution"
+        "name": "Can delete django job execution",
+        "content_type": 11,
+        "codename": "delete_djangojobexecution"
     }
 },
 {
     "model": "auth.permission",
     "pk": 45,
     "fields": {
-        "name": "Can add user",
-        "content_type": 16,
-        "codename": "add_user"
+        "name": "Can view django job execution",
+        "content_type": 11,
+        "codename": "view_djangojobexecution"
     }
 },
 {
     "model": "auth.permission",
     "pk": 46,
     "fields": {
-        "name": "Can change user",
-        "content_type": 16,
-        "codename": "change_user"
+        "name": "Can add пользователь",
+        "content_type": 12,
+        "codename": "add_user"
     }
 },
 {
     "model": "auth.permission",
     "pk": 47,
     "fields": {
-        "name": "Can delete user",
-        "content_type": 16,
-        "codename": "delete_user"
+        "name": "Can change пользователь",
+        "content_type": 12,
+        "codename": "change_user"
     }
 },
 {
     "model": "auth.permission",
     "pk": 48,
     "fields": {
-        "name": "Can view user",
-        "content_type": 16,
-        "codename": "view_user"
+        "name": "Can delete пользователь",
+        "content_type": 12,
+        "codename": "delete_user"
     }
 },
 {
     "model": "auth.permission",
     "pk": 49,
     "fields": {
-        "name": "Can change mailingsettings setting_status",
-        "content_type": 11,
-        "codename": "change_mailingsettings_setting_status"
+        "name": "Can view пользователь",
+        "content_type": 12,
+        "codename": "view_user"
     }
 },
 {
@@ -445,7 +445,7 @@
     "pk": 50,
     "fields": {
         "name": "Can add блог",
-        "content_type": 17,
+        "content_type": 13,
         "codename": "add_blog"
     }
 },
@@ -454,7 +454,7 @@
     "pk": 51,
     "fields": {
         "name": "Can change блог",
-        "content_type": 17,
+        "content_type": 13,
         "codename": "change_blog"
     }
 },
@@ -463,7 +463,7 @@
     "pk": 52,
     "fields": {
         "name": "Can delete блог",
-        "content_type": 17,
+        "content_type": 13,
         "codename": "delete_blog"
     }
 },
@@ -472,7 +472,7 @@
     "pk": 53,
     "fields": {
         "name": "Can view блог",
-        "content_type": 17,
+        "content_type": 13,
         "codename": "view_blog"
     }
 },
@@ -495,9 +495,9 @@
         "name": "manager",
         "permissions": [
             24,
-            26,
+            29,
             28,
-            36
+            37
         ]
     }
 }
